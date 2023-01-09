@@ -448,7 +448,7 @@ int main()
   print_title();
   lastinput[0]='\0';
   while (1) { 
-    printf("");
+    printf(":");
     readline(inputstr);
     printf("\n");
     strncpy(lastinput,inputstr,strlen(inputstr)+1); 
