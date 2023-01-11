@@ -25,11 +25,11 @@
 #include <string.h>
 #include <ctype.h>
 
-#define NUMKEYWORDS 30
+#define NUMKEYWORDS 15
 #define MAXLINELEN 23
 #define NUMSWAPS 10
 
-const char *keywords[15]=
+const char *keywords[]=
 
 {" ","A","E","I","O","U","Y","R","W","C",
 	"H","T","D","S","L"
@@ -53,7 +53,7 @@ int ResponsesPerKeyword[NUMKEYWORDS]= {
 	3,2,4,5,5
 	
 	};
-const char *responses[NUMKEYWORDS][150] = {
+const char *responses[NUMKEYWORDS][5] = {
     		{"YES","NO","MAYBE*","SO","WHY"},
 {"AND THEN","HAVE FAITH*","BE FAST","MOVE SLOW","I WILL DO IT"},
 {"SOME","ALL","NONE","POOH*","GOOD AMOUNT"},
