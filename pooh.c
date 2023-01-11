@@ -55,7 +55,7 @@ int ResponsesPerKeyword[NUMKEYWORDS][15] = {
 	
 	
 	};
-const char *responses[NUMKEYWORDS][410] = {
+const char *responses[NUMKEYWORDS][200] = {
    {   "DON'T YOU BELIEVE THAT I CAN*",
         "PERHAPS YOU WOULD LIKE TO BE ABLE TO*",
         "YOU WANT ME TO BE ABLE TO*"},
