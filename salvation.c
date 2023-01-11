@@ -53,7 +53,7 @@ int ResponsesPerKeyword[NUMKEYWORDS]= {
 	3,2,4,5,5
 	
 	};
-const char *responses[NUMKEYWORDS][15] = {
+const char *responses[NUMKEYWORDS][550] = {
     		{"YES","NO","MAYBE*","SO","WHY"},
 {"AND THEN","HAVE FAITH*","BE FAST","MOVE SLOW","I WILL DO IT"},
 {"SOME","ALL","NONE","POOH*","GOOD AMOUNT"},
