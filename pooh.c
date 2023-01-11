@@ -35,7 +35,7 @@ const char *keywords[]=
 	"T","H","L","D","S"
 	
 };
-const char *SWAPS[NUMSWAPS][10] = {
+const char *SWAPS[NUMSWAPS][20] = {
 		"I","T",
 		"D","S",
 		"A","U",
@@ -50,7 +50,8 @@ const char *SWAPS[NUMSWAPS][10] = {
 };
 
 int ResponsesPerKeyword[NUMKEYWORDS]= {
-	2,4,4,4,4,3,3,2,1,1
+	2,4,4,4,4,3,3,2,1,1,
+	5,5,4,2,2
 	
 	
 	};
