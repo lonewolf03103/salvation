@@ -6,7 +6,7 @@
 #define MAXLINELEN 23
 #define NUMSWAPS 20
 
-const char *keywords[]=
+const char *keywords[14]=
 
 {"A"," A ","E","O","U"," D","I"," Y","S","L","D","R  "
 };
@@ -24,7 +24,7 @@ const char *SWAPS[NUMSWAPS][2] = {
 		
 };
 
-int ResponsesPerKeyword[NUMKEYWORDS][]= {
+int ResponsesPerKeyword[NUMKEYWORDS][14]= {
 	2,4,4,4,4,3,3,2,1,1,
 	5,5,5,3
 	
