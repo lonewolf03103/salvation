@@ -2,14 +2,13 @@
 #include <string.h>
 #include <ctype.h>
 
-#define NUMKEYWORDS 14
+#define NUMKEYWORDS 1
 #define MAXLINELEN 23
 #define NUMSWAPS 20
 
 const char *keywords[]=
 
-{" ","A","E","I","O","U","Y","R","W","C",
-    "P","S","T","N"
+{" "
 };
 const char *SWAPS[NUMSWAPS][2] = {
 		"I","T",
