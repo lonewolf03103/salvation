@@ -49,7 +49,7 @@ const char *SWAPS[NUMSWAPS][20] = {
 		
 };
 
-int ResponsesPerKeyword[NUMKEYWORDS]= {
+int ResponsesPerKeyword[NUMKEYWORDS][15] = {
 	2,4,4,4,4,3,3,2,1,1,
 	5,5,4,2,2
 	
