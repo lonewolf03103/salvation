@@ -1,4 +1,5 @@
 
+
 /* eliza.c  
  * ys
  * original code by Weizenbaum, 1966
@@ -12,14 +13,16 @@
 #include <stdio.h>
 #include <string.h>
 
-#define NUMKEYWORDS 15
+#define NUMKEYWORDS 25
 #define MAXLINELEN 40
 #define NUMSWAPS 230
 
 const char *keywords[]= {
        "YES","NO","MAYBE*","SO","WHY",
   "KISS","DO","WILL","ARE","IS",
-  "THIS","THAT","THEY","YOU","I"
+  "THIS","THAT","THEY","YOU","I",
+  "AND","THEN","WOULD","IF","BUT",
+  "POOH","FOR","MY","BECAUSE","TO"
 			
 };
 
@@ -364,7 +367,7 @@ const char *responses[NUMKEYWORDS][5] = {
  "YES","NO","MAYBE*","SO","WHY",
   "AND THEN","HAVE FAITH*","BE FAST","MOVE SLOW","I WILL DO IT",
    "SOME","ALL","NONE","POOH*","GOOD AMOUNT",
-    "NO TRY","WHY TRY","CARROT*","I KNOW THINGS","I BELIEVE SOMETHING",
+    "NO YOU ARE STILL TRYING","WHY TRY","CARROT*","I KNOW THINGS","I BELIEVE SOMETHING",
      "WHAT DO YOU BELIEVE","WHAT DO WE BELIEVE*","BE ABSTRACT","BE DIRECT",
 "FANCY THAT","NO WAY","I WILL CONSIDER THAT AGAIN*","YOU GET EYES","I HAVE NICE EYES",
 "I LIKE YOUR EYES*","WHAT DO YOUR EYES LOOK LIKE","NOW THAT IS A BAD THEORY","WHAT WE REALLY NEED ARE PROGRESS REPORTS","NO I AM NOT A POLITICIAN",
