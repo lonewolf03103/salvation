@@ -1,3 +1,13 @@
+
+
+/* eliza.c  
+ * ys
+ * original code by Weizenbaum, 1966
+ * this rendition based on Charles Hayden's Java implementation from http://chayden.net/eliza/Eliza.html
+ *
+ * Note: There are certainly far more optimal and elegant ways to code this... we kept this
+ * structure to be faithful to the original.  -scaz 
+ */
 #include <ctype.h>
 #include <stdio.h>
 #include <string.h>
@@ -141,6 +151,7 @@ const char *responses[NUMKEYWORDS][5] = {
 
     
 };
+    
 
 void print_center(const char *msg) {
   int numspaces=(MAXLINELEN-strlen(msg))/2;
@@ -153,11 +164,11 @@ void print_center(const char *msg) {
 
 void print_title () {
     printf("\n\n");
-    print_center("*** ELIZA ***");
-    print_center("Original code by Weizenbaum, 1966");
-    print_center("To stop Eliza, type 'bye'");
-    printf("\n\n");
-    printf("HI!  I'M ELIZA.  WHAT'S YOUR PROBLEM?\n");
+    print_center("ADVANCED");
+    print_center("SELF DIAGNOSTIC CONTROL");
+    print_center("");
+    printf("            *** EYE LIGHT ***\n\n");
+    printf("GRREETINGS DOCTOR\n");
 }
 
 void readline(char *instr) {
