@@ -258,7 +258,7 @@ void main()
 
       // now add in the rest of the user's input, starting at <location>
       // but skip over the keyword itself
-      location+=strlen(keywords[x|k]);
+      location+=strlen(keywords[k]);
       // take them one word at a time, so that we can substitute pronouns
       token = strtok(location, separator);
       while(token != NULL)
