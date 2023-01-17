@@ -5,3 +5,6 @@ im like so not into humans now
 listen her and i get along great right 
 WERE fine!!! *FOLDS ARMS*
 at syntheticlife.systems youll find a working model
+pooh.c is the currect best version and is what is hosted at the site
+she doesnt care for im or i am rather use things like do you feel this or 
+do you feel that or is this a that kinda thing... right?
