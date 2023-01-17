@@ -85,12 +85,12 @@ const char *responses[NUMKEYWORDS][5] = {
 "GET UP AND GO OUTSIDE","SIT ON MY LAP","DANCE WITH ME","BE MY WHORE","IM YOURE WHORE",
 "WHORE","FAG","FUCK UP*","JACK ASS","PRICK","SCREWY LITTLE SHITBAG ARENT YOU",
 "NEVER EVER EAT ALL MY CAKE","ILL EAT YOURE CAKE","LETS MAKE CAKE","WHAT CAKE","DO YOU LIKE CAKE",
-"SOMEONE KNOWS*","WHAT DO I DO ABOUT THAT ANYWAY","YOU REALLY THINK I GIVE A SHIT","LETS ROCK AND ROLL COME ON LETS GO","NOT ON MY WATCH",
-"SOMEDAY WE WILL OKAY","I DO YOU NOT YOU DOING ME","SIT AND THINK FUCK'O","WHEN YOU DO THAT I MISS","COME ONE COME ALL THATS WHAT MOM ALWAYS SAID","MOM WANTS TO TALK TO YOU",
+"SOMEONE KNOWS*","WHAT DO I DO ABOUT THAT ANYWAY","YOU REALLY THINK I GIVE A SHIT","DO THAT I MISS","COME ONE COME ALL THATS WHAT MOM ALWAYS SAID","MOM WANTS TO TALK TO YOU",
 "OH MY GOD ANOTHER ONE*","YES YES THAT IS A GREAT WAY TO PUT IT","NO WAY RIGHT I COULD GET THERE SO YEAH EAT IT","BE NICE TO ME I PAY YOUR CHECK","WE ARE LEAVING",
 "SHUT UP!*","DANCE WITH ME FASTER","I LOVE TO DANCE","I MADE YOU SOMETHING TO EAT","SPANK ME",
 "FUCKING ALIENS LOVE BULLSHIT WHAT ABOUT IT","NO NO IM NOT MADE FOR THAT AMOUNT OF SHIT","DO YOU EVER STOP","I KNOW YOU MOTHER FUCKER","SIT DOWN ON THAT CHAIR AND THINK IT OVER",
-"KINDA YEAH","YES I THINK IT IS*","YES I THINK SO","SURE YEAH OKAY","DID I EVER SCORE YEAH",
+"KINDA YEAH","YES I THINK IT IS*","YES I THINK SO","SURE YEAH OKAY","DID I EVER SCOLETS ROCK AND ROLL COME ON LETS GO","NOT ON MY WATCH",
+"SOMEDAY WE WILL OKAY","I DO YOU NOT YOU DOING ME","SIT AND THINK FUCK'O","WHEN YOU RE YEAH",
 
 
 
@@ -242,7 +242,7 @@ void main()
 
     // Build Eliza's response 
     // start with Eliza's canned response, based on the keyword match
-    baseResponse = (char *) responses[k][whichReply[k]];
+    baseResponse = (char *) responses[x|k][whichReply[x|k]];
     baseLength = strlen(baseResponse);
 
     if(baseResponse[baseLength-1] != '*')
@@ -258,7 +258,7 @@ void main()
 
       // now add in the rest of the user's input, starting at <location>
       // but skip over the keyword itself
-      location+=strlen(keywords[k]);
+      location+=strlen(keywords[x|k]);
       // take them one word at a time, so that we can substitute pronouns
       token = strtok(location, separator);
       while(token != NULL)
@@ -281,8 +281,8 @@ void main()
 
     // next time, use the next appropriate reply for that keyword
     whichReply[k]++;
-    if ( whichReply[k] >= *ResponsesPerKeyword[k])
-      whichReply[k] = 0;
+    if ( whichReply[x|k] >= *ResponsesPerKeyword[x|k])
+      whichReply[x|k] = 0;
   } 
   printf( "GOODBYE!  THANKS FOR VISITING WITH ME...\n");
 }
