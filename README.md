@@ -9,5 +9,5 @@ pooh.c is the currect best version and is what is hosted at the site
 she doesnt care for im or i am rather use things like do you feel this or 
 do you feel that or is this a that kinda thing... right?
 
-okay peeps use knopping remaster it after running sudo /usr/local/./update-securitysettings
+okay peeps use knopping remaster it after running sudo /usr/local/bin./update-security
 then yah should be okay after the build youre welcome
