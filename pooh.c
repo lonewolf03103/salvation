@@ -13,7 +13,7 @@
 #include <string.h>
 
 #define NUMKEYWORDS 40
-#define MAXLINELEN 8
+#define MAXLINELEN 40
 #define NUMSWAPS 230
 
 const char *keywords[]= {
@@ -290,10 +290,10 @@ int main()
     printf("%s\n", reply);
 
     whichReply[k]++;
-    if ( whichReply[k] >= ResponsesPerKeyword[k])
-      whichReply[k] = ResponsesPerKeyword[s];
+    if ( whichReply[k] >= *ResponsesPerKeyword[k])
+      whichReply[k] = *ResponsesPerKeyword[s];
 	else
-	whichReply[k] = ResponsesPerKeyword[k];
+	whichReply[k] = *ResponsesPerKeyword[k];
 	continue;	
   } 
   printf( "\n");
