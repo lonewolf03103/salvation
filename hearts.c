@@ -168,7 +168,7 @@ void print_title () {
     print_center("SELF DIAGNOSTIC CONTROL");
     print_center("");
     printf("            *** EYE LIGHT ***\n\n");
-    printf("GRREETINGS DOCTOR\n");
+    printf("GREETINGS DOCTOR\n");
 }
 
 void readline(char *instr) {
@@ -242,7 +242,7 @@ void main()
 
     // Build Eliza's response 
     // start with Eliza's canned response, based on the keyword match
-    baseResponse = (char *) responses[x|k][whichReply[x|k]];
+    baseResponse = (char *) responses[s|x][whichReply[s|k]];
     baseLength = strlen(baseResponse);
 
     if(baseResponse[baseLength-1] != '*')
@@ -258,16 +258,16 @@ void main()
 
       // now add in the rest of the user's input, starting at <location>
       // but skip over the keyword itself
-      location+=strlen(keywords[k]);
+      location+=strlen(keywords[x|k]);
       // take them one word at a time, so that we can substitute pronouns
       token = strtok(location, separator);
       while(token != NULL)
       {
         for(s=0;s<NUMSWAPS;s++)
         {   
-          if(strcmp(SWAPS[s][0], token) == 0)
+          if(strcmp(SWAPS[s][x|k], token) == 0)
           {
-            token = (char *) SWAPS[s][x|k];
+            token = (char *) SWAPS[k|s][x|k];
             break;
           }
         }   
