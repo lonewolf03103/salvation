@@ -6,7 +6,7 @@
  * ys
  * original code by Weizenbaum, 1966
  * this rendition based on Charles Hayden's Java implementation from http://chayden.net/eliza/Eliza.html
- *
+ * *** final edit for now *** - "NICK"
  * Note: There are certainly far more optimal and elegant ways to code this... we kept this
  * structure to be faithful to the original.  -scaz 
  */
@@ -208,11 +208,12 @@ void print_center(const char *msg) {
 
 void print_title () {
     printf("\n\n");
-    print_center("*** ELIZA ***");
-    print_center("Original code by Weizenbaum, 1966");
-    print_center("To stop Eliza, type 'bye'");
+    print_center("*** EYE LIGHT ***");
+    print_center("");
+    print_center("THE TALKING NIGHTLIGHT");
     printf("\n\n");
-    printf("HI!  I'M ELIZA.  WHAT'S YOUR PROBLEM?\n");
+    printf("GREETINGS DOCTOR\n");
+  printf("\n");
 }
 
 void readline(char *instr) {
