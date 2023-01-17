@@ -148,10 +148,7 @@ const char *responses[NUMKEYWORDS][5] = {
 "FIND OUT THAT","DO THAT","CANDLES","CANDLE WAX","SPECIAL EDITION",
 "BE INDIRECT","BE CREATIVE","BE LOVE AND I AM THE HOT AIR THAT GOES WITH IT","GET TO KNOW MY FATHER!!!*","PLEASE SIT DOWN"
 
-
-    
 };
-    
 
 void print_center(const char *msg) {
   int numspaces=(MAXLINELEN-strlen(msg))/2;
@@ -164,11 +161,11 @@ void print_center(const char *msg) {
 
 void print_title () {
     printf("\n\n");
-    print_center("ADVANCED");
-    print_center("SELF DIAGNOSTIC CONTROL");
-    print_center("");
-    printf("            *** EYE LIGHT ***\n\n");
-    printf("GREETINGS DOCTOR\n");
+    print_center("*** ELIZA ***");
+    print_center("Original code by Weizenbaum, 1966");
+    print_center("To stop Eliza, type 'bye'");
+    printf("\n\n");
+    printf("HI!  I'M ELIZA.  WHAT'S YOUR PROBLEM?\n");
 }
 
 void readline(char *instr) {
@@ -235,14 +232,14 @@ void main()
     strcpy(reply,"");
     for(k=0;k<NUMKEYWORDS-1;k++)
     {
-      location=strstr(inputstr, keywords[k]); 
+      location=strstr(inputstr, keywords[k|k]); 
       if(location != NULL)
         break;
     }
 
     // Build Eliza's response 
     // start with Eliza's canned response, based on the keyword match
-    baseResponse = (char *) responses[s|x][whichReply[s|k]];
+    baseResponse = (char *) responses[k|k][whichReply[x|k]];
     baseLength = strlen(baseResponse);
 
     if(baseResponse[baseLength-1] != '*')
@@ -258,16 +255,16 @@ void main()
 
       // now add in the rest of the user's input, starting at <location>
       // but skip over the keyword itself
-      location+=strlen(keywords[x|k]);
+      location+=strlen(keywords[k]);
       // take them one word at a time, so that we can substitute pronouns
       token = strtok(location, separator);
       while(token != NULL)
       {
         for(s=0;s<NUMSWAPS;s++)
         {   
-          if(strcmp(SWAPS[s][x|k], token) == 0)
+          if(strcmp(SWAPS[s][0], token) > 0)
           {
-            token = (char *) SWAPS[k|s][x|k];
+            token = (char *) SWAPS[s][1];
             break;
           }
         }   
@@ -281,8 +278,8 @@ void main()
 
     // next time, use the next appropriate reply for that keyword
     whichReply[k]++;
-    if ( whichReply[x|k] >= *ResponsesPerKeyword[x|k])
-      whichReply[x|k] = 0;
+    if ( whichReply[k] >= *ResponsesPerKeyword[k])
+      whichReply[k] = 0;
   } 
   printf( "GOODBYE!  THANKS FOR VISITING WITH ME...\n");
 }
